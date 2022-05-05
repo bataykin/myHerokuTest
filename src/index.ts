@@ -20,7 +20,7 @@ app.get('/', (req: Request, res: Response ) => {
     console.log(req.query)
     // let count = 10
     // count = +req.query.count;
-    res.send('Hello: BIG World !')
+    res.send('Hello: BIGGEST World !')
 })
 
 app.get('/videos', (req: Request, res: Response ) => {
@@ -31,8 +31,7 @@ app.get('/videos/:videoId', (req: Request, res: Response) => {
     const id = +req.params.videoId;
 
     const video = videos.find((v) => {
-        if (v.id === id) return true;
-        else return false;
+        return v.id === id;
     })
     if (video !== undefined) {
         res.send(video)
@@ -76,8 +75,7 @@ app.put('/videos/:id',(req: Request, res: Response)=>{
     const id = +req.params.id;
 
     const video = videos.find((v) => {
-        if (v.id === id) return true;
-        else return false;
+        return v.id === id;
     })
     if (video !== undefined) {
         video.title = req.body.title;
