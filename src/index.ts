@@ -20,11 +20,13 @@ app.get('/', (req: Request, res: Response ) => {
     console.log(req.query)
     // let count = 10
     // count = +req.query.count;
-    res.send('Hello: BIGGEST World !')
+    res.send('Hello:  World !')
 })
 
 app.get('/videos', (req: Request, res: Response ) => {
-    res.sendStatus(200).send(videos)
+
+        res.send(videos)
+        res.sendStatus(200)
 })
 
 app.get('/videos/:videoId', (req: Request, res: Response) => {
