@@ -58,9 +58,10 @@ app.post('/videos', (req: Request, res: Response) => {
         author: 'it-incubator.eu'
     }
     videos.push(newVideo)
-    res.sendStatus(201)
-
+    res.status(201)
+   // res.send(newVideo)
     res.send(newVideo)
+
 })
 
 app.delete('/videos/:id',(req: Request, res: Response)=>{
