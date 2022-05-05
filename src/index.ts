@@ -20,7 +20,7 @@ app.get('/', (req: Request, res: Response ) => {
     console.log(req.query)
     // let count = 10
     // count = +req.query.count;
-    res.send('Hello:  World !')
+    res.send('Hello: YAYAYA  World !')
 })
 
 app.get('/videos', (req: Request, res: Response ) => {
@@ -59,6 +59,7 @@ app.post('/videos', (req: Request, res: Response) => {
     }
     videos.push(newVideo)
     res.send(newVideo)
+    res.sendStatus(201)
 })
 
 app.delete('/videos/:id',(req: Request, res: Response)=>{
