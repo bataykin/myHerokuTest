@@ -20,7 +20,7 @@ app.get('/', (req: Request, res: Response ) => {
     console.log(req.query)
     // let count = 10
     // count = +req.query.count;
-    res.send('Hello: YAYAYA  World !')
+    res.send('Hello: GITNAHER  World !')
 })
 
 app.get('/videos', (req: Request, res: Response ) => {
