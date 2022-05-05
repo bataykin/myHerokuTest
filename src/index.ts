@@ -70,7 +70,7 @@ app.delete('/videos/:id',(req: Request, res: Response)=>{
         return v.id !== +req.params.id
        })
 
-    res.sendStatus(204)
+    res.sendStatus(404)
     // videos.splice((id-1), 1);
 
     // put your code here
