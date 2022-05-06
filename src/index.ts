@@ -72,7 +72,7 @@ app.delete('/videos/:id',(req: Request, res: Response)=>{
 
     // videos.splice((id-1), 1);
     if (videos !== undefined) {
-        videos.splice((id-1), 1);
+        videos.splice((+req.params.id-1), 1);
         res.send(204)
     } else {
         res.sendStatus(404)
