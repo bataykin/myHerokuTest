@@ -70,9 +70,13 @@ app.delete('/videos/:id',(req: Request, res: Response)=>{
         return v.id !== +req.params.id
        })
 
-    res.sendStatus(404)
     // videos.splice((id-1), 1);
-
+    if (videos !== undefined) {
+        videos.splice((id-1), 1);
+        res.send(204)
+    } else {
+        res.sendStatus(404)
+    }
     // put your code here
 })
 
