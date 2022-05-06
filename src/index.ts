@@ -90,7 +90,7 @@ app.put('/videos/:id',(req: Request, res: Response)=>{
         video.title = req.body.title;
         res.send(204)
     } else {
-        res.sendStatus(404)
+        res.sendStatus(400)
     }
 
     // put your code here
